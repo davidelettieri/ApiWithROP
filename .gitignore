@@ -1,4 +1,5 @@
 .vscode
+Properties/
 bin
 obj
 nuget.config

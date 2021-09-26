@@ -22,7 +22,6 @@ namespace ApiWithROP.Controllers
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
         public ActionResult<User> Get(int id)
         {
             var user = _userService.GetUser(id);

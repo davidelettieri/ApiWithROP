@@ -9,7 +9,7 @@ namespace ApiWithROP.Services
         {
             if (id < 0)
             {
-                return new Failure("E-001", "User not found");
+                return Errors.UserNotFound;
             }
 
             return new User()

@@ -9,6 +9,9 @@ namespace ApiWithROP.Utils
     {
         public void Apply(OpenApiOperation operation, OperationFilterContext context)
         {
+            // we can override the 403 swagger documentation by decorating the endpoint with a
+            // ProducesResponseType(typeof([OTHER_TYPE]), StatusCodes.Status403Forbidden)]
+            // in such case Responses will contain a 403 key and the following code will skip the endpoint
             if (!operation.Responses.ContainsKey("403"))
             {
                 operation.Responses.Add("403", new OpenApiResponse
