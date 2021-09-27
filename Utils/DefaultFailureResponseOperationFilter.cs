@@ -16,7 +16,7 @@ namespace ApiWithROP.Utils
             {
                 operation.Responses.Add("403", new OpenApiResponse
                 {
-                    Description = "Problem response",
+                    Description = "Forbidden",
                     Content = new Dictionary<string, OpenApiMediaType>
                     {
                         ["application/json"] = new OpenApiMediaType
